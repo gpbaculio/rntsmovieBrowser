@@ -157,10 +157,7 @@ const Home: React.FC<HomeProps> = ({navigation}) => {
       <FlatList
         style={styles.listContainer}
         data={results}
-        renderItem={({item}) => {
-          console.log('rederItem ', item);
-          return <Movie onPress={onMoviePress} movie={item} />;
-        }}
+        renderItem={({item}) => <Movie onPress={onMoviePress} movie={item} />}
         keyExtractor={({imdbID}: MovieType) => imdbID}
         ItemSeparatorComponent={renderSeparator}
         ListHeaderComponent={
